@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Salão Belle - Beleza & Estética</title>
+  <meta name="description" content="Site modelo para salões de beleza femininos - serviços, galeria, equipe e agendamento." />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --accent:#E91E63; /* rosa */
+      --dark:#1f1f1f;
+      --muted:#777;
+      --card:#ffffffcc;
+      --glass: rgba(255,255,255,0.06);
+      --radius:16px;
+      --max-width:1100px;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0;font-family:Montserrat,system-ui,Segoe UI,Roboto,"Helvetica Neue",Arial;
+      background: linear-gradient(180deg,#fff 0%, #fff8fb 100%);color:var(--dark);
+      -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+      line-height:1.4;
+    }
+    .container{max-width:var(--max-width);margin:0 auto;padding:24px}
+
+    /* Header */
+    header{display:flex;align-items:center;justify-content:space-between;padding:18px 0}
+    .logo{display:flex;align-items:center;gap:12px}
+    .logo .brand{font-weight:700;font-size:20px;color:var(--accent)}
+    nav{display:flex;gap:18px}
+    nav a{color:var(--dark);text-decoration:none;font-weight:600}
+    .cta{background:var(--accent);color:white;padding:10px 14px;border-radius:12px;text-decoration:none}
+
+    /* HERO */
+    .hero{display:grid;grid-template-columns:1fr 460px;gap:32px;align-items:center;padding:36px 0}
+    .hero .eyebrow{color:var(--muted);font-weight:600}
+    .hero h1{font-size:38px;margin:8px 0 12px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .hero .actions{display:flex;gap:12px}
+    .btn{padding:12px 16px;border-radius:12px;border:0;cursor:pointer;font-weight:600}
+    .btn-primary{background:var(--accent);color:white}
+    .btn-ghost{background:transparent;border:2px solid var(--accent);color:var(--accent)}
+
+    .card{background:var(--card);backdrop-filter: blur(6px);padding:18px;border-radius:16px;box-shadow:0 8px 30px rgba(0,0,0,0.06)}
+    .appointment .field{display:flex;gap:8px;margin-bottom:10px}
+    .appointment input, .appointment select, .appointment textarea{flex:1;padding:10px;border-radius:10px;border:1px solid #eee}
+
+    /* Services */
+    .services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:36px 0}
+    .service{padding:18px;border-radius:14px;background:linear-gradient(180deg,#fff,#fff0);transition:transform .25s, box-shadow .25s}
+    .service:hover{transform:translateY(-6px);box-shadow:0 10px 30px rgba(0,0,0,0.08)}
+    .service h3{margin:8px 0}
+
+    /* Gallery */
+    .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+    .gallery img{width:100%;height:160px;object-fit:cover;border-radius:10px;cursor:pointer}
+
+    /* Testimonials */
+    .testimonials{margin:36px 0}
+    .slider{display:flex;gap:12px;overflow:hidden}
+    .slide{min-width:300px;padding:18px;border-radius:12px;background:linear-gradient(180deg,#ffffff,#fff6f9);box-shadow:0 6px 20px rgba(0,0,0,0.04)}
+
+    /* Footer */
+    footer{margin-top:36px;padding:18px 0;color:var(--muted);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px}
+
+    /* Floating WhatsApp */
+    .whatsapp{position:fixed;right:20px;bottom:20px;background:linear-gradient(180deg,#25D366,#128C7E);width:64px;height:64px;border-radius:999px;display:flex;align-items:center;justify-content:center;color:white;box-shadow:0 10px 30px rgba(18,140,126,0.25);z-index:1000}
+    .whatsapp img{width:32px;height:32px}
+
+    /* Responsive */
+    @media (max-width:980px){
+      .hero{grid-template-columns:1fr;}
+      .services{grid-template-columns:repeat(2,1fr)}
+      .gallery{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:560px){
+      nav{display:none}
+      .services{grid-template-columns:1fr}
+      .gallery img{height:120px}
+      .hero h1{font-size:28px}
+    }
+
+    /* subtle motion */
+    .reveal{opacity:0;transform:translateY(10px);transition:opacity .6s ease, transform .6s ease}
+    .reveal.visible{opacity:1;transform:none}
+  </style>
+</head>
+<body>
+  <header class="container">
+    <div class="logo">
+      <svg width="44" height="44" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="24" height="24" rx="6" fill="#fff"/><path d="M7 12c2 0 3-2 5-2s3 2 5 2" stroke="#E91E63" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <div>
+        <div class="brand">Salão Belle</div>
+        <div style="font-size:12px;color:var(--muted)">Beleza & Estética</div>
+      </div>
+    </div>
+    <nav>
+      <a href="#servicos">Serviços</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#equipe">Equipe</a>
+      <a href="#contato">Contato</a>
+    </nav>
+    <a class="cta" href="#agendar">Agende</a>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <div class="eyebrow reveal">Bem-vinda ao seu momento</div>
+        <h1 class="reveal">Transforme seu visual com estilo e carinho</h1>
+        <p class="reveal">Cortes, coloração, manicure, maquiagem e muito mais — atendimento personalizado por profissionais especializados.</p>
+        <div class="actions reveal">
+          <button class="btn btn-primary" onclick="openBooking()">Agendar agora</button>
+          <a class="btn btn-ghost" href="#galeria">Ver galeria</a>
+        </div>
+        <div style="margin-top:18px;display:flex;gap:12px" class="reveal">
+          <div class="card" style="display:flex;gap:12px;align-items:center;max-width:420px">
+            <div style="width:56px;height:56px;border-radius:10px;background:linear-gradient(180deg,#fff,#ffeef6);display:flex;align-items:center;justify-content:center;font-weight:700;color:var(--accent)">S</div>
+            <div>
+              <div style="font-weight:700">Promo do Mês</div>
+              <div style="color:var(--muted);font-size:14px">Coloração + Corte com 20% de desconto.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <aside>
+        <div class="card appointment reveal">
+          <h3 style="margin:0 0 8px">Agendamento rápido</h3>
+          <p style="margin:0 0 12px;color:var(--muted)">Preencha os dados — retornaremos por WhatsApp.</p>
+          <div class="field"><input id="name" placeholder="Seu nome"/></div>
+          <div class="field"><input id="phone" placeholder="Telefone (WhatsApp)"/></div>
+          <div class="field"><select id="service"><option>Escolha um serviço</option><option>Corte</option><option>Coloração</option><option>Manicure</option><option>Maquiagem</option></select></div>
+          <div class="field"><input id="date" type="date"/></div>
+          <div style="display:flex;gap:8px"><button class="btn btn-primary" onclick="submitBooking()">Enviar</button><button class="btn" onclick="openWhatsAppQuick()">WhatsApp</button></div>
+          <small style="display:block;margin-top:8px;color:var(--muted)">* Este é um formulário de demonstração — substitua por integração real.</small>
+        </div>
+      </aside>
+    </section>
+
+    <section id="servicos">
+      <h2>Serviços populares</h2>
+      <div class="services">
+        <div class="service card reveal">
+          <h3>Corte & Styling</h3>
+          <p style="color:var(--muted);font-size:14px">Cortes modernos e personalizados para o seu rosto.</p>
+        </div>
+        <div class="service card reveal">
+          <h3>Coloração</h3>
+          <p style="color:var(--muted);font-size:14px">Técnicas em mechas, balayage, ombré e coloração global.</p>
+        </div>
+        <div class="service card reveal">
+          <h3>Manicure & Pedicure</h3>
+          <p style="color:var(--muted);font-size:14px">Esmaltação, alongamento em gel e cuidados de spa.</p>
+        </div>
+        <div class="service card reveal">
+          <h3>Maquiagem</h3>
+          <p style="color:var(--muted);font-size:14px">Maquiagem para eventos, noivas e editoriais.</p>
+        </div>
+        <div class="service card reveal">
+          <h3>Extensão de Cílios</h3>
+          <p style="color:var(--muted);font-size:14px">Desde naturais até volume russo.</p>
+        </div>
+        <div class="service card reveal">
+          <h3>Tratamentos</h3>
+          <p style="color:var(--muted);font-size:14px">Hidratação profunda, cauterização e cronograma capilar.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria">
+      <h2>Galeria</h2>
+      <div class="gallery">
+        <img src="https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?q=80&w=800&auto=format&fit=crop" alt="galeria1" onclick="openLightbox(this.src)"/>
+        <img src="https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=800&auto=format&fit=crop" alt="galeria2" onclick="openLightbox(this.src)"/>
+        <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?q=80&w=800&auto=format&fit=crop" alt="galeria3" onclick="openLightbox(this.src)"/>
+        <img src="https://images.unsplash.com/photo-1556228453-2d0d3dbb1c2f?q=80&w=800&auto=format&fit=crop" alt="galeria4" onclick="openLightbox(this.src)"/>
+      </div>
+    </section>
+
+    <section id="equipe">
+      <h2>Nossa equipe</h2>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <div class="card" style="flex:1;min-width:240px;display:flex;gap:12px;align-items:center">
+          <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=400&auto=format&fit=crop" style="width:88px;height:88px;border-radius:10px;object-fit:cover" />
+          <div>
+            <div style="font-weight:700">Mariana Souza</div>
+            <div style="color:var(--muted);font-size:13px">Especialista em coloração</div>
+          </div>
+        </div>
+        <div class="card" style="flex:1;min-width:240px;display:flex;gap:12px;align-items:center">
+          <img src="https://images.unsplash.com/photo-1545996124-6d7f3b1d3b4a?q=80&w=400&auto=format&fit=crop" style="width:88px;height:88px;border-radius:10px;object-fit:cover" />
+          <div>
+            <div style="font-weight:700">Ana Ribeiro</div>
+            <div style="color:var(--muted);font-size:13px">Cabeleireira & Styling</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="testimonials reveal">
+      <h2>Depoimentos</h2>
+      <div class="slider" id="slider">
+        <div class="slide">
+          <strong>Paula M.</strong>
+          <p style="color:var(--muted)">"Melhor salão da cidade! Atendimento impecável e corte perfeito."</p>
+        </div>
+        <div class="slide">
+          <strong>Carla R.</strong>
+          <p style="color:var(--muted)">"A colorista entendeu exatamente o que eu queria. Super recomendo."</p>
+        </div>
+        <div class="slide">
+          <strong>Bianca L.</strong>
+          <p style="color:var(--muted)">"Ambiente aconchegante e equipe muito profissional."</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" style="margin-top:24px">
+      <h2>Contato</h2>
+      <div style="display:flex;gap:18px;flex-wrap:wrap">
+        <div style="flex:1;min-width:260px" class="card">
+          <h3>Endereço</h3>
+          <p style="color:var(--muted);margin:6px 0">Rua Exemplo, 123 — Centro</p>
+          <h3>Telefone</h3>
+          <p style="color:var(--muted);margin:6px 0">(11) 99999-9999</p>
+          <a class="btn" href="#" onclick="openWhatsAppQuick()">Falar no WhatsApp</a>
+        </div>
+        <form style="flex:1;min-width:260px" onsubmit="event.preventDefault(); submitContact();" class="card">
+          <label>Nome<input id="cname" required placeholder="Seu nome"/></label>
+          <label style="display:block;margin-top:8px">Mensagem<textarea id="cmessage" rows="4" required placeholder="Escreva sua mensagem" style="width:100%;padding:8px;border-radius:8px;border:1px solid #eee"></textarea></label>
+          <div style="margin-top:10px"><button class="btn btn-primary" type="submit">Enviar mensagem</button></div>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div>© <span id="year"></span> Salão Belle</div>
+      <div style="color:var(--muted)">Feito com carinho — atualize este modelo como quiser.</div>
+    </footer>
+  </main>
+
+  <!-- WhatsApp floating button - edite o número abaixo para o seu WhatsApp no formato internacional sem + ou zeros: 5511999999999 -->
+  <a id="wa-btn" class="whatsapp" href="https://wa.me/5511999999999?text=Ol%C3%A1!%20Quero%20agendar%20um%20hor%C3%A1rio" target="_blank" rel="noopener">
+    <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'><path fill='white' d='M20.52 3.48A11.88 11.88 0 0012 0C5.37 0 .05 5.31.05 11.95c0 2.1.55 4.15 1.6 5.95L0 24l6.35-1.63A11.92 11.92 0 0012 23.9c6.63 0 11.95-5.31 11.95-11.95 0-3.2-1.25-6.2-3.43-8.47zM12 21.6a9.62 9.62 0 01-4.88-1.34l-.35-.21-3.77.97.99-3.66-.22-.37A9.59 9.59 0 1121.6 12 9.59 9.59 0 0112 21.6z'/></svg>" alt="whatsapp">
+  </a>
+
+  <!-- Lightbox overlay -->
+  <div id="lightbox" style="position:fixed;inset:0;background:rgba(0,0,0,0.8);display:none;align-items:center;justify-content:center;padding:20px;z-index:2000" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" style="max-width:90%;max-height:90%;border-radius:12px;box-shadow:0 18px 60px rgba(0,0,0,0.6)">
+  </div>
+
+  <script>
+    // small utilities and interactions
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // reveal on load
+    window.addEventListener('load', ()=>{
+      document.querySelectorAll('.reveal').forEach((el,i)=>setTimeout(()=>el.classList.add('visible'), 120*i));
+    });
+
+    // simple slider auto-scroll for testimonials
+    (function(){
+      const s = document.getElementById('slider');
+      let idx = 0;
+      setInterval(()=>{
+        idx = (idx + 1) % s.children.length;
+        s.scrollTo({left: s.children[idx].offsetLeft, behavior:'smooth'});
+      }, 3500);
+    })();
+
+    // Booking / contact actions (demo only)
+    function openBooking(){
+      document.querySelector('html').scrollTo({top:0,behavior:'smooth'});
+      document.getElementById('name').focus();
+    }
+    function submitBooking(){
+      const name = document.getElementById('name').value || 'Cliente';
+      const phone = document.getElementById('phone').value || '';
+      const service = document.getElementById('service').value || '';
+      const date = document.getElementById('date').value || '';
+      // cria uma mensagem com os campos preenchidos e abre no WhatsApp
+      const msg = encodeURIComponent(`Ol%C3%A1%2C%20me%20chamo%20${name}.%20Quero%20agendar%20${service}%20em%20${date}.%20Meu%20telefone%20%C3%A9%20${phone}`);
+      // número padrão (edite no atributo href do botão wa-btn se desejar outro)
+      const wa = document.getElementById('wa-btn').href.split('?')[0];
+      window.open(wa + '?text=' + msg, '_blank');
+    }
+    function submitContact(){
+      const n = document.getElementById('cname').value;
+      const m = document.getElementById('cmessage').value;
+      alert('Obrigado, ' + n + '! Sua mensagem foi preparada para envio. (Demo)');
+      // exemplo: abrir email ou whatsapp - aqui abrimos mailto
+      window.location.href = `mailto:contato@salaobelle.com?subject=${encodeURIComponent('Contato do site - ' + n)}&body=${encodeURIComponent(m)}`;
+    }
+
+    // WhatsApp quick open (uses wa-btn href)
+    function openWhatsAppQuick(){
+      window.open(document.getElementById('wa-btn').href, '_blank');
+    }
+
+    // Lightbox
+    function openLightbox(src){
+      const lb = document.getElementById('lightbox');
+      document.getElementById('lightbox-img').src = src;
+      lb.style.display = 'flex';
+    }
+    function closeLightbox(){
+      const lb = document.getElementById('lightbox');
+      lb.style.display = 'none';
+      document.getElementById('lightbox-img').src = '';
+    }
+
+    // Accessibility: allow Esc to close lightbox
+    window.addEventListener('keydown', (e)=>{ if(e.key==='Escape') closeLightbox(); });
+  </script>
+</body>
+</html>
