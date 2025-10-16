@@ -6,6 +6,7 @@
   "scripts": {
     "start": "node src/index.js",
     "api": "node src/server.js",
+    "start:venom": "node scripts/start-venom.js",
     "lint": "echo \"No lint configured\"",
   "test": "jest --coverage",
   "test:api": "jest __tests__/api.test.js --runInBand",
