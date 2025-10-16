@@ -1,0 +1,14 @@
+2025/10/16-17:04:07.324 c3c Reusing MANIFEST C:\sites\farmacia-bot\tokens\farmacia-bot-session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/10/16-17:04:07.327 c3c Recovering log #149
+2025/10/16-17:04:07.720 c3c Reusing old log C:\sites\farmacia-bot\tokens\farmacia-bot-session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000149.log 
+2025/10/16-17:04:13.930 9ec Level-0 table #157: started
+2025/10/16-17:04:14.026 9ec Level-0 table #157: 982258 bytes OK
+2025/10/16-17:04:14.029 9ec Delete type=0 #149
+2025/10/16-17:04:14.031 c3c Manual compaction at level-0 from '\x00'\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00(\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/10/16-17:04:23.231 2580 Compacting 1@1 + 4@2 files
+2025/10/16-17:04:27.660 2580 Generated table #158@1: 33978 keys, 2200905 bytes
+2025/10/16-17:04:27.833 2580 Generated table #159@1: 3090 keys, 2157317 bytes
+2025/10/16-17:04:28.212 2580 Generated table #160@1: 24827 keys, 2217695 bytes
+2025/10/16-17:04:28.524 2580 Generated table #161@1: 76756 keys, 2179062 bytes
+2025/10/16-17:04:28.524 2580 Compacted 1@1 + 4@2 files => 8754979 bytes
+2025/10/16-17:04:28.526 2580 compacted to: files[ 0 0 4 0 0 0 0 ]

@@ -1,0 +1,25 @@
+STDOUT:
+OUT: == FarmaciaBot iniciado (CLI demo) ==
+Digite "help" para ver os comandos.
+
+FarmaciaBot> Comandos:
+  help                      Mostra esta ajuda
+  listar                    Lista todos os itens
+  ver <chave>               Mostra detalhe de um item
+  vender <chave> <qtd>      Vende uma quantidade (inteira)
+  autoresp <texto>          Força resposta automática
+  sair | exit               Encerra o CLI
+FarmaciaBot> Estoque:
+ - paracetamol: Paracetamol 500mg — 120 un. — R$ 3.50
+ - dipirona: Dipirona 500mg — 60 un. — R$ 2.75
+ - mascara: Máscara descartável (10 un.) — 15 un. — R$ 8.00
+FarmaciaBot> Paracetamol 500mg — 120 un. — R$ 3.50
+FarmaciaBot> Venda realizada: Paracetamol 500mg x 1. Subtotal: R$ 3.50. Saldo restante: 119
+FarmaciaBot> Encerrando...
+Bye
+
+Integration test passed
+
+STDERR:
+
+EXIT_CODE:0

@@ -1,0 +1,10 @@
+STDOUT:
+LISTALL OK - items: 3
+GETITEM OK - Paracetamol 500mg
+SELL OK - subtotal 3.5
+AUTORESP OK - responded
+All handler tests passed
+
+STDERR:
+
+EXIT_CODE:0

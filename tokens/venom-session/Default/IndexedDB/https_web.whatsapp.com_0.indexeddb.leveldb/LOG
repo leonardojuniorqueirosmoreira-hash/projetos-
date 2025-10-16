@@ -1,0 +1,27 @@
+2025/10/16-19:05:40.493 638 Reusing MANIFEST C:\sites\farmacia-bot\tokens\venom-session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/MANIFEST-000001
+2025/10/16-19:05:40.496 638 Recovering log #343
+2025/10/16-19:05:40.669 638 Reusing old log C:\sites\farmacia-bot\tokens\venom-session\Default\IndexedDB\https_web.whatsapp.com_0.indexeddb.leveldb/000343.log 
+2025/10/16-19:05:45.390 26cc Level-0 table #355: started
+2025/10/16-19:05:45.443 26cc Level-0 table #355: 307132 bytes OK
+2025/10/16-19:05:45.452 26cc Delete type=0 #343
+2025/10/16-19:05:45.456 26cc Manual compaction at level-0 from '\x00(\x00\x00\x00' @ 72057594037927935 : 1 .. '\x00)\x00\x00\x00' @ 0 : 0; will stop at (end)
+2025/10/16-19:05:54.859 1a94 Compacting 1@1 + 8@2 files
+2025/10/16-19:05:56.874 1a94 Generated table #356@1: 76256 keys, 2238530 bytes
+2025/10/16-19:05:58.969 1a94 Generated table #357@1: 22818 keys, 2181221 bytes
+2025/10/16-19:06:00.809 1a94 Generated table #358@1: 2302 keys, 2155226 bytes
+2025/10/16-19:06:02.728 1a94 Generated table #359@1: 4508 keys, 2159073 bytes
+2025/10/16-19:06:06.429 1a94 Generated table #360@1: 31484 keys, 2258095 bytes
+2025/10/16-19:06:11.363 1a94 Generated table #361@1: 22924 keys, 2175833 bytes
+2025/10/16-19:06:12.741 1a94 Generated table #362@1: 102291 keys, 2253325 bytes
+2025/10/16-19:06:13.926 1a94 Generated table #363@1: 41090 keys, 906015 bytes
+2025/10/16-19:06:13.926 1a94 Compacted 1@1 + 8@2 files => 16327318 bytes
+2025/10/16-19:06:13.927 1a94 compacted to: files[ 0 0 8 0 0 0 0 ]
+2025/10/16-19:06:13.929 1a94 Delete type=2 #345
+2025/10/16-19:06:13.929 1a94 Delete type=2 #346
+2025/10/16-19:06:13.929 1a94 Delete type=2 #347
+2025/10/16-19:06:13.930 1a94 Delete type=2 #348
+2025/10/16-19:06:13.930 1a94 Delete type=2 #349
+2025/10/16-19:06:13.930 1a94 Delete type=2 #350
+2025/10/16-19:06:13.930 1a94 Delete type=2 #351
+2025/10/16-19:06:13.931 1a94 Delete type=2 #352
+2025/10/16-19:06:13.931 1a94 Delete type=2 #355

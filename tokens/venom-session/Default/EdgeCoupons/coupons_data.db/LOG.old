@@ -1,0 +1,5 @@
+2025/10/16-17:11:57.146 1c54 Creating DB C:\sites\farmacia-bot\tokens\venom-session\Default\EdgeCoupons/coupons_data.db since it was missing.
+2025/10/16-17:11:57.160 1c54 Reusing MANIFEST C:\sites\farmacia-bot\tokens\venom-session\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2025/10/16-17:13:45.238 57c Level-0 table #5: started
+2025/10/16-17:13:45.297 57c Level-0 table #5: 672237 bytes OK
+2025/10/16-17:13:45.303 57c Delete type=0 #3

@@ -8,8 +8,8 @@
     "api": "node src/server.js",
     "start:venom": "node scripts/start-venom.js",
     "lint": "echo \"No lint configured\"",
-  "test": "jest --coverage",
-  "test:api": "jest __tests__/api.test.js --runInBand",
+    "test": "jest --coverage",
+    "test:api": "jest __tests__/api.test.js --runInBand",
     "test:handlers": "node scripts/test-handlers.js",
     "test:cli": "node scripts/test-cli-integration.js"
   },
@@ -18,9 +18,10 @@
   "dependencies": {
     "dotenv": "^16.0.0",
     "express": "^5.1.0",
-  "venom-bot": "^4.1.0",
+    "puppeteer": "^24.25.0",
     "qrcode": "^1.5.4",
-    "qrcode-terminal": "^0.12.0"
+    "qrcode-terminal": "^0.12.0",
+    "venom-bot": "^4.1.0"
   },
   "devDependencies": {
     "jest": "^29.0.0",

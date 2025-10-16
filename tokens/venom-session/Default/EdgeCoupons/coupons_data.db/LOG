@@ -1,0 +1,6 @@
+2025/10/16-17:28:19.210 c3c Reusing MANIFEST C:\sites\farmacia-bot\tokens\venom-session\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2025/10/16-17:29:36.376 c3c Recovering log #4
+2025/10/16-17:29:36.378 c3c Reusing old log C:\sites\farmacia-bot\tokens\venom-session\Default\EdgeCoupons/coupons_data.db/000004.log 
+2025/10/16-17:30:46.403 1750 Level-0 table #8: started
+2025/10/16-17:30:46.416 1750 Level-0 table #8: 672340 bytes OK
+2025/10/16-17:30:46.420 1750 Delete type=0 #4
