@@ -25,6 +25,38 @@ function requireAuth(req, res, next) {
 
 app.get('/health', (req, res) => res.json({ ok: true, env: process.env.NODE_ENV || 'development' }));
 
+// Optional Venom integration
+let venomHelper = null;
+try { venomHelper = require('./venom'); } catch (e) { /* optional */ }
+
+app.post('/wa/send', requireAuth, async (req, res) => {
+  if (!venomHelper) return res.status(501).json({ error: 'venom-not-available' });
+  try {
+    const { to, message } = req.body || {};
+    if (!to || !message) return res.status(400).json({ error: 'to_and_message_required' });
+    await venomHelper.startVenom();
+    const result = await venomHelper.sendText(to, message);
+    res.json({ ok: true, result });
+  } catch (err) {
+    logger.error('POST /wa/send error', err);
+    res.status(500).json({ error: 'venom_send_failed', details: err.message });
+  }
+});
+
+app.get('/wa/qr', requireAuth, async (req, res) => {
+  if (!venomHelper) return res.status(501).json({ error: 'venom-not-available' });
+  try {
+    await venomHelper.startVenom();
+    const b64 = venomHelper.getLastQr();
+    if (!b64) return res.status(204).json({ error: 'no-qr-yet' });
+    const img = Buffer.from(b64, 'base64');
+    res.type('png').send(img);
+  } catch (err) {
+    logger.error('GET /wa/qr error', err);
+    res.status(500).json({ error: 'venom_qr_failed' });
+  }
+});
+
 app.get('/stock', async (req, res) => {
   try {
     const list = await stock.listAll();
