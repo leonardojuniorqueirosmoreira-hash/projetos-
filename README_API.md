@@ -39,6 +39,37 @@ Notes:
 
 - Venom requires Chromium; the server will attempt to start Venom only when `USE_VENOM=1`. In many CI or headless servers you might need extra puppeteer args (for example `--no-sandbox`).
 - Starting Venom will create a session directory and emit a QR. You can retrieve that QR via `/wa/qr` while the session is initializing.
+
+## Conectar ao GitHub
+
+Se o repositório local ainda não estiver vinculado ao GitHub, adicione um remote e faça push:
+
+```powershell
+# exemplo: substitua a URL pelo seu repositório
+git remote add origin https://github.com/<usuario>/<repo>.git
+git push -u origin $(git branch --show-current)
+```
+
+## Iniciar Venom localmente
+
+Requisitos:
+- Node.js instalado
+- Chrome/Chromium disponível (defina `CHROME_PATH` se necessário)
+
+Exemplo para iniciar Venom e mostrar o QR na pasta `venom-session`:
+
+```powershell
+# crie um .env com USE_VENOM=1 ou defina as vars inline
+$env:USE_VENOM='1'; $env:HEADLESS='0'; node scripts/start-venom.js
+```
+
+Se quiser rodar em modo headless (sem abrir o navegador):
+
+```powershell
+$env:USE_VENOM='1'; $env:HEADLESS='1'; node scripts/start-venom.js
+```
+
+O script salvará um arquivo `venom_qr.png` dentro de `VENOM_DIR` quando receber o QR.
 # Farmacia Bot API
 
 Rotas principais:
