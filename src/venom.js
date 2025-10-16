@@ -15,8 +15,11 @@ async function startVenom() {
     return null;
   }
 
+  const VENOM_DIR = process.env.VENOM_DIR || 'venom-session';
+  try { require('fs').mkdirSync(VENOM_DIR, { recursive: true }); } catch (e) {}
+
   client = await venom.create({
-    session: 'farmacia-bot-session',
+    session: VENOM_DIR,
     multidevice: false,
     headless: true,
     qrTimeout: 0,
